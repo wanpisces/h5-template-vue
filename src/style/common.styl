@@ -1,0 +1,100 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption
+    padding 0
+    margin 0
+    list-style none
+    font-style normal
+    text-decoration none
+    border none
+    font-weight normal
+    font-family 'Microsoft Yahei'
+    box-sizing border-box
+    -webkit-tap-highlight-color transparent
+    -webkit-font-smoothing antialiased
+    &:hover
+        outline none
+vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    {prop} args
+border-radius()
+    vendor('border-radius', arguments)
+box-shadow()
+    vendor('box-shadow', arguments)
+/* 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸 */
+::-webkit-scrollbar
+    width 0px
+    height 0px
+    background-color #fff
+/* 定义滚动条轨道 内阴影+圆角 */
+::-webkit-scrollbar-track
+    -webkit-box-shadow inset 0 0 1px rgba(0, 0, 0, 0)
+    border-radius 10px
+    background-color #fff
+/* 定义滑块 内阴影+圆角 */
+::-webkit-scrollbar-thumb
+    border-radius 10px
+    -webkit-box-shadow inset 0 0 6px rgba(0, 0, 0, 0.3)
+    background-color #555
+input[type='button'], input[type='submit'], input[type='search'], input[type='reset']
+    -webkit-appearance none
+textarea
+    -webkit-appearance none
+html, body
+    height 100%
+    width 100%
+    background-color #fff
+.clear:after
+    content ''
+    display block
+    clear both
+.clear
+    zoom 1
+.back_img
+    background-repeat no-repeat
+    background-size 100% 100%
+.margin
+    margin 0 auto
+.left
+    float left
+.right
+    float right
+.hide
+    display none
+.show
+    display block
+.ellipsis
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+/* 换行 */
+.word_wrap
+    word-wrap break-word
+    word-break break-all
+/* 不可选中文字 */
+.no_select_text
+    -webkit-touch-callout none
+    /* iOS Safari */
+    -webkit-user-select none
+    /* Chrome/Safari/Opera */
+    -khtml-user-select none
+    /* Konqueror */
+    -moz-user-select none
+    /* Firefox */
+    -ms-user-select none
+    /* Internet Explorer/Edge */
+    user-select none
+.paddingTop
+    padding-top 1.95rem
+@keyframes backOpacity
+    0%
+        opacity 1
+    25%
+        opacity 0.5
+    50%
+        opacity 1
+    75%
+        opacity 0.5
+    100%
+        opacity 1
+.animation_opactiy
+    animation backOpacity 2s ease-in-out infinite
